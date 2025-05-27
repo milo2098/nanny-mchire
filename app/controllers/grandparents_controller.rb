@@ -1,0 +1,2 @@
+class GrandparentsController < ApplicationController
+end

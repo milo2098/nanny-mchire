@@ -1,0 +1,5 @@
+<ul>
+  <% @grandparents.each do |grandparent| %>
+  <li><%= grandparent.user.first_name %> - <%= grandparent.user.last_name %></li>
+  <% end %>
+</ul>

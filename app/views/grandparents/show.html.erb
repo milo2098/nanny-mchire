@@ -5,16 +5,16 @@
   </div>
 
   <div class="grandparent-details">
-    <h1><%= @grandparent.user.first_name %></h1>
+    <h1><u><%= @grandparent.user.first_name %> <%= @grandparent.user.last_name %></u></h1>
     <p>Skill: <%= @grandparent.skill %></p>
     <p>Price per hour: £<%= @grandparent.price %></p>
     <p>Years of experience: <%= @grandparent.experience %></p>
     <h4>Description:</h3>
     <p><%= @grandparent.description %></p>
-  </div>
-</div>
 <br>
   <%= button_to "Book a granparent", class: "button"  %>
+  </div>
 <br>
 <hr>
 <%= link_to "Back to list of grandparents", grandparents_path %>
+</div>

@@ -1,9 +1,11 @@
 Rails.application.routes.draw do
-  devise_for :users
-  resources :grandparents do
-    resources :bookings, only: [:new, :create]
+  devise_for :users do
+    resources :bookings, only: [:index,:show, :new, :create ]
   end
   root to: "pages#home"
+  resources :grandparents do
+    resources :bookings, only: [:index,:show, :new, :create ]
+  end
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Reveal health status on /up that returns 200 if the app boots with no exceptions, otherwise 500.

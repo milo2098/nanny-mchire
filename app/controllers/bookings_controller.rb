@@ -2,6 +2,7 @@ class BookingsController < ApplicationController
   before_action :set_grandparent, only: %i[new create]
 
   def index
+    @grandparent = Grandparent.find(params[:grandparent_id])
     @bookings = Booking.all
     @grandparents_bookings = Booking.where(grandparent_id: params[:grandparent_id])
   end

@@ -13,7 +13,7 @@
     <p><%= @grandparent.description %></p>
     <br>
     <%= link_to "View #{@grandparent.user.first_name}'s bookings", grandparent_bookings_path(@grandparent), class: "button" %>
-     <%= link_to "Book Grandparent", new_grandparent_booking_path(@grandparent), class: "button"  %>
+    <%= link_to "Book #{@grandparent.user.first_name}", new_grandparent_booking_path(@grandparent), class: "button"  %>
     <br>
   </div>
 <hr>

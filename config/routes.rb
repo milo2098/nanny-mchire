@@ -1,10 +1,13 @@
 Rails.application.routes.draw do
-  devise_for :users do
-    resources :bookings, only: [:index,:show, :new, :create ]
-  end
+  devise_for :users
   root to: "pages#home"
   resources :grandparents do
-    resources :bookings, only: [:index,:show, :new, :create ]
+    resources :bookings, only: [:new, :create, :index ]
+  end
+  resources :bookings, only: [] do
+    collection do
+      get :my_bookings
+    end
   end
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 

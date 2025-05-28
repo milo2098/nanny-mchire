@@ -12,7 +12,7 @@
     <h4>Description:</h3>
     <p><%= @grandparent.description %></p>
 <br>
-  <%= button_to "Book a granparent", class: "button"  %>
+  <%= link_to "Book Grandparent", new_grandparent_booking_path(@grandparent), class: "button"  %>
   </div>
 <br>
 <hr>

@@ -1,11 +1,9 @@
 <div class="container justify-content-center">
-  <div class="input-group my-3">
-    <div class="input-group-prepend">
-      <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Skill</button>
-    </div>
-    <input type="text" class="form-control" aria-label="Text input with dropdown button">
-  </div>
-
+  <%= simple_form_for :filter, url: grandparents_path, method: :get do |f| %>
+    <%= f.input :skill, collection: Grandparent.all.pluck(:skill) %>
+    <%# <%= f.input :price, as: :select, collection: Grandparent.all.pluck(:price).uniq %>
+    <%= f.submit %>
+  <% end %>
   <div class="grandparents-cards-container  d-flex flex-wrap justify-content-center">
       <% @grandparents.each do |grandparent| %>
         <%= link_to grandparent_path(grandparent) do %>

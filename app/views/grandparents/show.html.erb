@@ -1,5 +1,20 @@
-<div class="image-layout">
-  <%= image_tag("elderly1.jpg", class: "big-img") %>
-</div>
 
-<h1><%= @grandparent.user.first_name %></h1>
+<div class="grandparent-container">
+  <div class="image-layout">
+    <%= image_tag("elderly1.jpg", class: "big-img") %>
+  </div>
+
+  <div class="grandparent-details">
+    <h1><%= @grandparent.user.first_name %></h1>
+    <p>Skill: <%= @grandparent.skill %></p>
+    <p>Price per hour: £<%= @grandparent.price %></p>
+    <p>Years of experience: <%= @grandparent.experience %></p>
+    <h4>Description:</h3>
+    <p><%= @grandparent.description %></p>
+  </div>
+</div>
+<br>
+  <%= button_to "Book a granparent", class: "button"  %>
+<br>
+<hr>
+<%= link_to "Back to list of grandparents", grandparents_path %>

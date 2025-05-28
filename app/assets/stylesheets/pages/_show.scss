@@ -10,13 +10,15 @@
 
 
 .button {
-  margin: 10px;
+  margin-bottom: 16px;
   padding: 10px;
   background-color: #007bff;
   color: white;
   border: none;
   border-radius: 5px;
   cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
 }
 
 .time {

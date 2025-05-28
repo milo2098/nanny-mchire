@@ -1,22 +1,10 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
-
-<div class="banner" style="
-  background-image: url('app/assets/images/hq720.jpg');
-  background-size: cover;
-  background-position: center;
-  height: 400px;"
-  >
-
-</div>
-
+<div class="banner" style="background-image: url('<%= asset_path('hq720.jpg') %>'), linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4))">
   <div class="container">
     <h1 class="fw-bold">Learn from the best</h1>
     <p class="lead">You need a granny and granny needs you</p>
-    <a class="btn btn-light mt-3" href="#">Hire a granny now</a>
+    <%= link_to "Hire a granny now", grandparents_path, class: " btn btn-light mt-3 rounded-3"%>
   </div>
 </div>
-
 
 <div class="container my-5">
   <div class="row g-4 justify-content-center">
@@ -24,12 +12,10 @@
 
     <div class="col-md-4">
       <div class="card h-100">
-        <img src="..." class="card-img-top" alt="Card image cap">
         <div class="card-body">
           <h4 class="card-title fw-bold">Benedict Rees-Mogg</h4>
           <p class="text-muted">Architecture & Engineering</p>
           <p class="card-text">Architect and Engineer with over 15 years in the field. Passionate about inspiring the next generation, he enjoys sharing basic knowledge of architecture and engineering with children and teenagers.</p>
-          <a href="#" class="btn btn-primary">Hire me!</a>
         </div>
       </div>
     </div>
@@ -37,12 +23,10 @@
 
     <div class="col-md-4">
       <div class="card h-100">
-        <img src="..." class="card-img-top" alt="Card image cap">
         <div class="card-body">
           <h4 class="card-title fw-bold">Charlotte Hayes</h4>
           <p class="text-muted">Jewellery Design</p>
           <p class="card-text">Charlotte Hayes is an expert in jewellery design with 10+ years of experience. She loves helping people learn how to create their own unique pieces.</p>
-          <a href="#" class="btn btn-primary">Hire me!</a>
         </div>
       </div>
     </div>
@@ -50,12 +34,10 @@
 
     <div class="col-md-4">
       <div class="card h-100">
-        <img src="..." class="card-img-top" alt="Card image cap">
         <div class="card-body">
           <h4 class="card-title fw-bold">Wasaki Wafula</h4>
           <p class="text-muted">Electric Guitar Playing</p>
           <p class="card-text">With 35 years of experience, Wasaki Wafula brings passion and real-world skill to every session. Whether you’re strumming your first chord or chasing your rockstar dreams, his sessions are perfect for young musicians ready to make some noise.</p>
-          <a href="#" class="btn btn-primary">Hire me!</a>
         </div>
       </div>
     </div>

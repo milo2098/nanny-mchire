@@ -1,0 +1,11 @@
+<div class="new-grandparent container mt-3 justify-content-center">
+  <h1 class="text-center">Enter Your details to Create a Grandparent Page</h1>
+  <%= simple_form_for(@grandparent) do |f| %>
+    <%= f.input :skill %>
+    <%= f.input :description %>
+    <%= f.input :price %>
+    <%= f.input :experience %>
+    <%= f.submit "Create Grandparent Page", class: "button" %>
+  <% end %>
+  <%= link_to "Back to Home", root_path, class: "button" %>
+</div>

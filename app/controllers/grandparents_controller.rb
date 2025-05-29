@@ -6,7 +6,12 @@ class GrandparentsController < ApplicationController
       @grandparents = Grandparent.all
     end
   end
+
   def show
     @grandparent = Grandparent.find(params[:id])
+  end
+
+  def new
+    @grandparent = Grandparent.new
   end
 end

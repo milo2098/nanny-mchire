@@ -9,6 +9,7 @@
 #   end
 
 Booking.destroy_all
+Grandparent.destroy_all
 User.destroy_all
 user1 = User.create!(first_name: "James", last_name: "Smith", username: "james_k_s", email: "kayshuttleworthjames@gmail.com", password: "password123")
 user2 = User.create!(first_name: "John", last_name: "Doe", username: "john_doe", email: "john@doe.com", password: "password123")

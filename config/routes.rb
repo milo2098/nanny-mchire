@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
   devise_for :users do
-    resources :grandparents, only: [:new, :create]
+    resources :grandparents, only: [:index, :new, :create]
   end
+  root to: "pages#home"
+
   resources :grandparents do
     resources :bookings, only: [:new, :create, :index ]
   end

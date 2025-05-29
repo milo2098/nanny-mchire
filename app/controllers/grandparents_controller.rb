@@ -1,12 +1,12 @@
 class GrandparentsController < ApplicationController
   def index
     @grandparents_location = Grandparent.all
-    @user_location = User.where.associated(:grandparents)
+    @user_location = User.where.associated(:grandparent)
     @markers = User.all.geocoded.map do |user|
       {
         lat: user.latitude,
         lng: user.longitude,
-        grandparent: user.grandparents
+        grandparent: user.grandparent
       }
       # grandparent.user.latitude,
       # grandparent.user.longitude

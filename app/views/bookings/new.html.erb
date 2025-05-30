@@ -1,10 +1,13 @@
 
 <div class="new-booking">
   <h1>New Booking</h1>
-  <%= simple_form_for [@grandparent, @booking] do |f| %>
+  <%= simple_form_for [@grandparent, @booking], html: { data: { controller: "datepicker" } } do |f| %>
     <%= f.input :start_time,
             as: :string,
-            input_html: { data: { controller: "datepicker" } } %>
+            input_html: { class: "datepicker", data: { datepicker_target: "start" } }%>
+    <%= f.input :end_time,
+            as: :string,
+            input_html: { class: "datepicker", data: { datepicker_target: "end" } }%>
     <%= f.submit "Submit Booking", class: "button" %>
   <% end %>
   <%= link_to "Back to #{@grandparent.user.first_name}'s Profile", grandparent_path(@grandparent), class: "button" %>

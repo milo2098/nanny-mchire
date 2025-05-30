@@ -2,7 +2,7 @@
 <div class="new-booking">
   <h1>New Booking</h1>
   <%= simple_form_for [@grandparent, @booking] do |f| %>
-    <%= f.input :date_time,
+    <%= f.input :start_time,
             as: :string,
             input_html: { data: { controller: "datepicker" } } %>
     <%= f.submit "Submit Booking", class: "button" %>

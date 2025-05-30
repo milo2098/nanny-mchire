@@ -24,9 +24,9 @@ grandparent4 = Grandparent.create!(skill: "Knitting", description: "I can teach 
 grandparent5 = Grandparent.create!(skill: "surfing", description: "I can teach you how to knit", price: 15, experience: 3, user: user5)
 
 
-Booking.create!(grandparent_id: grandparent1.id, user_id: user4.id, date_time: "2025-10-20 10:00:00")
-Booking.create!(grandparent_id: grandparent2.id, user_id: user3.id, date_time: "2025-10-20 10:00:00")
-Booking.create!(grandparent_id: grandparent3.id, user_id: user2.id, date_time: "2025-10-20 10:00:00")
-Booking.create!(grandparent_id: grandparent4.id, user_id: user1.id, date_time: "2025-10-20 10:00:00")
-Booking.create!(grandparent_id: grandparent5.id, user_id: user5.id, date_time: "2025-10-20 10:00:00")
+Booking.create!(grandparent_id: grandparent1.id, user_id: user4.id, start_time: "2025-10-20 10:00:00", end_time: "2025-10-20 12:00:00")
+Booking.create!(grandparent_id: grandparent2.id, user_id: user3.id, start_time: "2025-10-20 10:00:00", end_time: "2025-10-20 12:00:00")
+Booking.create!(grandparent_id: grandparent3.id, user_id: user2.id, start_time: "2025-10-20 10:00:00", end_time: "2025-10-20 12:00:00")
+Booking.create!(grandparent_id: grandparent4.id, user_id: user1.id, start_time: "2025-10-20 10:00:00", end_time: "2025-10-20 12:00:00")
+Booking.create!(grandparent_id: grandparent5.id, user_id: user5.id, start_time: "2025-10-20 10:00:00", end_time: "2025-10-20 12:00:00")
 puts "Seed data created successfully!"

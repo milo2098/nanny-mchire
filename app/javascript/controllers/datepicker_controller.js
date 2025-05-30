@@ -1,11 +1,11 @@
 import { Controller } from "@hotwired/stimulus"
-import flatpickr from "flatpickr"; // You need to import this to use new flatpickr()
+import flatpickr from "flatpickr";
 
 export default class extends Controller {
   connect() {
     flatpickr(this.element, {
       mode: "range",
-      enableTime: true,          // <-- Enable time picker
+      enableTime: true,
       time_24hr: true,
       altInput: true,
       altFormat: "F j, Y - H:i",
@@ -13,8 +13,7 @@ export default class extends Controller {
       minDate: "today",
       minTime: "09:00",
       maxTime: "19:30",
-      maxDays: 1,
-      minuteIncrement: 30,      // <-- Set minute increment to 30 minutes
+      minuteIncrement: 30,
     })
   }
 }

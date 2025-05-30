@@ -22,10 +22,10 @@
   <div class="buttons">
     <%= link_to "View #{@grandparent.user.first_name}'s bookings", grandparent_bookings_path(@grandparent), class: "button" %>
     <%= link_to "Book #{@grandparent.user.first_name}", new_grandparent_booking_path(@grandparent), class: "button"  %>
+  <p><%= image_tag "https://res.cloudinary.com/dpt8iwr4k/image/upload/v1748614169/back_isc0mn.png" %> Back to list of grandparents</p>
     <%=link_to  grandparents_path, class: "back" do %>
+  <% end %>
   </div>
-<p><%= image_tag "https://res.cloudinary.com/dpt8iwr4k/image/upload/v1748614169/back_isc0mn.png" %> Back to list of grandparents</p>
-<% end %>
 </div>
 <div>
 </div>

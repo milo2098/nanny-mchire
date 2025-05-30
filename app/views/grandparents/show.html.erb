@@ -1,7 +1,9 @@
 
 <div class="grandparent-container">
   <div class="image-layout">
-    <%= image_tag("elderly1.jpg", class: "big-img") %>
+    <% @grandparent.photos.each do |photo| %>
+      <%= cl_image_tag photo.key, class: "multiple-img" %>
+    <% end %>
   </div>
 
   <div class="grandparent-details">

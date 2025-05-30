@@ -1,10 +1,42 @@
-<div class="new-grandparent container mt-3 justify-content-center">
-  <h1 class="text-center">Enter Your details to Create a Grandparent Page</h1>
+<div class="new-grandparent container mt-3 justify-content-center bg-light px-5 py-4 rounded-3 shadow">
+  <h2 class="fw-bolder mt-0 mb-4">Create a profile:</h1>
   <%= simple_form_for(@grandparent) do |f| %>
     <%= f.input :skill, label: "What skill would you like to teach?" %>
     <%= f.input :description, label: "Tell us some background information about yourself and your skill:", as: :text, input_html: { rows: 5, cols: 50 }  %>
-    <%= f.input :price, label: "How much would you like to charge per hour?", collection: (5..40).step(5).to_a, as: :select %>
-    <%= f.input :experience, label: "How many years of experience do you have in your skill?", collection: (5..80).step(5).to_a, as: :select %>
+    <div class="d-flex align-items-center">
+      <div data-controller="range" class="mb-3 container d-flex flex-column align-items-center">
+        <%= f.input :price, as: :integer, label: "How much would you like to charge per hour?",
+            input_html: {
+              type: "range",
+              min: 0,
+              max: 50,
+              step: 1,
+              value: 0,
+              data: { range_target: "slider", action: "input->range#update" }
+            } %>
+        <div class="d-flex align-items-center">
+          <span>Price:</span>
+          <span class="ms-2 fw-bolder">£</span>
+          <span class="fw-bolder" data-range-target="output"><%= @grandparent.price || 0 %></span>
+        </div>
+      </div>
+      <div data-controller="range" class="mb-3 container d-flex flex-column align-items-center">
+        <%= f.input :experience, as: :integer, label: "How many years of experience do you have in your skill?",
+            input_html: {
+              type: "range",
+              min: 0,
+              max: 50,
+              step: 5,
+              value: 0,
+              data: { range_target: "slider", action: "input->range#update" }
+            } %>
+        <div class="d-flex align-items-center">
+          <span>Years:</span>
+          <span class="ms-2 fw-bolder" data-range-target="output"><%= @grandparent.experience || 0 %></span>
+        </div>
+      </div>
+    </div>
+
     <%= f.input :photos, label: "Upload a few photo of yourself", as: :file, input_html: {multiple: true}  %>
     <%= f.submit "Create Grandparent Page", class: "button" %>
   <% end %>

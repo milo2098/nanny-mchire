@@ -8,9 +8,6 @@ class GrandparentsController < ApplicationController
         lng: user.longitude,
         grandparent: user.grandparent
       }
-      # grandparent.user.latitude,
-      # grandparent.user.longitude
-      # could be wrong, might just be grandparent.latitude, grandparent.longitude
     end
 
     if params.dig(:filter, :skill).present?
@@ -43,6 +40,6 @@ class GrandparentsController < ApplicationController
   private
 
   def grandparent_params
-    params.require(:grandparent).permit(:skill, :description, :price, :experience)
+    params.require(:grandparent).permit(:skill, :description, :price, :experience, photos: [])
   end
 end

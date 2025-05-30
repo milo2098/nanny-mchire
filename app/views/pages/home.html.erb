@@ -1,47 +1,88 @@
-<div class="banner" style="background-image: url('<%= asset_path('hq720.jpg') %>'), linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4))">
+<div class="banner" style="background-image: url('<%= asset_path('elderly6.jpg') %>'), linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4))">
   <div class="container">
-    <h1 class="fw-bold">Learn from the best</h1>
-    <p class="lead">You need a granny and granny needs you</p>
-    <%= link_to "Hire a granny now", grandparents_path, class: " btn btn-light mt-3 rounded-3"%>
-    <%= link_to "Make a grandparent page", new_grandparent_path, class: " btn btn-light mt-3 rounded-3"%>
+    <h1 class="fw-bold">Grandparents need you just as much as you need them</h1>
+    <%= link_to "Hire now", grandparents_path, class: "btn btn-light mt-3 rounded-3" %>
+    <%= link_to "Create a grandparent profile", new_grandparent_path, class: "btn btn-light mt-3 rounded-3" %>
   </div>
 </div>
 
 <div class="container my-5">
-  <div class="row g-4 justify-content-center">
+  <h2 class="fw-bold mb-3 text-center">About Us</h2>
+  <p>Grandparents have more hobbies and superpowers than you can imagine - from mastering the perfect Sunday roast and cooking a full English breakfast, to passing down secret knitting techniques and legendary garden tricks. Some know how to build rockets, fix airplanes, or at least explain exactly how it should be done - often with a cup of tea and a brilliant story to go with it.NannyMcHire celebrates these everyday heroes by connecting them with younger generations eager to learn, laugh, and share time together.</p>
+</div>
+<div class="container my-5">
+  <h2 class="mb-4 text-center fw-bold">Explore Our Wonderful Grandparent Profiles</h2>
 
+  <div class="row row-cols-1 row-cols-md-3 g-4 justify-content-center">
 
-    <div class="col-md-4">
-      <div class="card h-100">
+    <!-- Card 1 -->
+    <div class="col d-flex justify-content-center">
+      <div class="card h-100" style="width: 18rem;">
+
         <div class="card-body">
-          <h4 class="card-title fw-bold">Benedict Rees-Mogg</h4>
+          <h5 class="card-title fw-bold">Benedict Rees-Mogg</h5>
           <p class="text-muted">Architecture & Engineering</p>
-          <p class="card-text">Architect and Engineer with over 15 years in the field. Passionate about inspiring the next generation, he enjoys sharing basic knowledge of architecture and engineering with children and teenagers.</p>
+          <p class="card-text">Architect and engineer with over 15 years' experience, keen to share his passion with budding young minds.</p>
         </div>
       </div>
     </div>
 
-
-    <div class="col-md-4">
-      <div class="card h-100">
+    <!-- Card 2 -->
+    <div class="col d-flex justify-content-center">
+      <div class="card h-100" style="width: 18rem;">
         <div class="card-body">
-          <h4 class="card-title fw-bold">Charlotte Hayes</h4>
+          <h5 class="card-title fw-bold">Charlotte Hayes</h5>
           <p class="text-muted">Jewellery Design</p>
-          <p class="card-text">Charlotte Hayes is an expert in jewellery design with 10+ years of experience. She loves helping people learn how to create their own unique pieces.</p>
+          <p class="card-text">With 10+ years in jewellery design, Charlotte delights in teaching others how to craft their own treasures.</p>
         </div>
       </div>
     </div>
 
-
-    <div class="col-md-4">
-      <div class="card h-100">
+    <!-- Card 3 -->
+    <div class="col d-flex justify-content-center">
+      <div class="card h-100" style="width: 18rem;">
         <div class="card-body">
-          <h4 class="card-title fw-bold">Wasaki Wafula</h4>
+          <h5 class="card-title fw-bold">Wasaki Wafula</h5>
           <p class="text-muted">Electric Guitar Playing</p>
-          <p class="card-text">With 35 years of experience, Wasaki Wafula brings passion and real-world skill to every session. Whether you’re strumming your first chord or chasing your rockstar dreams, his sessions are perfect for young musicians ready to make some noise.</p>
+          <p class="card-text">Wasaki brings 35 years of rock ‘n’ roll energy, perfect for those ready to strike their first chord.</p>
         </div>
       </div>
     </div>
+    <!--
+     <div class="col d-flex justify-content-center">
+      <div class="card h-100" style="width: 18rem;">
+        <div class="card-body">
+          <h5 class="card-title fw-bold">
+            <%= Grandparent.first.user.first_name %> <%= Grandparent.first.user.last_name %>
+            </h5>
+          <p class="text-muted">
+            <%= Grandparent.first.skill %>
+          </p>
+          <p class="card-text">
+            <%= Grandparent.first.description %>
+            <%# With 10+ years in jewellery design, Charlotte delights in teaching others how to craft their own treasures.</p> %>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="col d-flex justify-content-center">
+      <div class="card h-100" style="width: 18rem;">
+        <div class="card-body">
+          <h5 class="card-title fw-bold">
+            <%= Grandparent.last.user.first_name %> <%= Grandparent.last.user.last_name %>
+            </h5>
+          <p class="text-muted">
+            <%=Grandparent.last.skill  %>
+
+            </p>
+          <p class="card-text">
+            <%= Grandparent.last.description %>
+            </p>
+        </div>
+      </div>
+    </div>
+    -->
 
   </div>
 </div>

@@ -22,15 +22,18 @@ class BookingsController < ApplicationController
       render :new, status: :unprocessable_entity
     end
   end
+
   def my_bookings
     @bookings = Booking.where(user_id: current_user.id)
   end
+
   private
+
   def set_grandparent
     @grandparent = Grandparent.find(params[:grandparent_id])
   end
 
   def booking_params
-    params.require(:booking).permit(:date_time)
+    params.require(:booking).permit(:start_time, :end_time)
   end
 end

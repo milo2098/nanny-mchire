@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   root to: "pages#home"
 
   resources :grandparents do
-    resources :bookings, only: [:new, :create, :index ]
+    resources :bookings, only: [:new, :create, :index, :show ]
   end
   resources :bookings, only: [] do
     collection do

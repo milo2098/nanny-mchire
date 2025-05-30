@@ -17,11 +17,13 @@
               <%= cl_image_tag grandparent.user.photo.key, class: "card-photo", alt: "grandparent photo" %>
           <% end %>
             <div class="card-info">
+              <h5 class="card-title"><%= grandparent.user.first_name %> <%= grandparent.user.last_name %></h5>
+            </div>
+            <div class="card-info">
               <div>
-                <h5 class="card-title"><%= grandparent.user.first_name %> <%= grandparent.user.last_name %></h5>
                 <p>Skill: <%= grandparent.skill %></p>
               </div>
-              <p>Price: £<%= grandparent.price %></p>
+              <p>Price: £<%= grandparent.price %>/hr</p>
             </div>
           </div>
           <% end %>

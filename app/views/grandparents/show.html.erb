@@ -1,21 +1,32 @@
+<div class="full-page">
+
 
 <div class="grandparent-container">
   <div class="image-layout">
-    <%= image_tag("elderly1.jpg", class: "big-img") %>
+    <% @grandparent.photos.each do |photo| %>
+      <%= cl_image_tag photo.key, class: "multiple-img" %>
+    <% end %>
   </div>
-
+  <div class="name">
+  <h1><u><%= @grandparent.user.first_name %> <%= @grandparent.user.last_name %></u></h1>
+  </div>
   <div class="grandparent-details">
-    <h1><u><%= @grandparent.user.first_name %> <%= @grandparent.user.last_name %></u></h1>
+    <h4>Details:</h4>
     <p>Skill: <%= @grandparent.skill %></p>
-    <p>Price per hour: £<%= @grandparent.price %></p>
+    <p>Price: £<%= @grandparent.price %>/hr</p>
     <p>Years of experience: <%= @grandparent.experience %></p>
-    <h4>Description:</h3>
+    <h4>Description:</h4>
     <p><%= @grandparent.description %></p>
+  </div>
     <br>
+  <div class="buttons">
     <%= link_to "View #{@grandparent.user.first_name}'s bookings", grandparent_bookings_path(@grandparent), class: "button" %>
     <%= link_to "Book #{@grandparent.user.first_name}", new_grandparent_booking_path(@grandparent), class: "button"  %>
-    <br>
+    <%=link_to  grandparents_path, class: "back" do %>
   </div>
-<hr>
-<%= link_to "Back to list of grandparents", grandparents_path %>
+<p><%= image_tag "https://res.cloudinary.com/dpt8iwr4k/image/upload/v1748614169/back_isc0mn.png" %> Back to list of grandparents</p>
+<% end %>
+</div>
+<div>
+</div>
 </div>

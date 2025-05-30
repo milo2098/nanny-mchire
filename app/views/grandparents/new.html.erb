@@ -5,7 +5,7 @@
     <%= f.input :description, label: "Tell us some background information about yourself and your skill:", as: :text, input_html: { rows: 5, cols: 50 }  %>
     <div class="d-flex align-items-center">
       <div data-controller="range" class="mb-3 container d-flex flex-column align-items-center">
-        <%= f.input :experience, as: :integer, label: "How much would you like to charge per hour?",
+        <%= f.input :price, as: :integer, label: "How much would you like to charge per hour?",
             input_html: {
               type: "range",
               min: 0,
